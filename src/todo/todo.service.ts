@@ -33,4 +33,11 @@ export class TodoService {
   delete(id: number) {
     return this.todoRepository.delete(id);
   }
+  // todo.service.ts
+async findAllByUser(userId: number) {
+  // Örneğin TypeORM kullanıyorsan:
+  return this.todoRepository.find({ where: { user: { id: userId } } });
+  // Eğer array veya farklı bir yapı kullanıyorsan ona göre uyarlayacaksın.
+}
+
 }
