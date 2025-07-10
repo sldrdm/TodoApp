@@ -25,74 +25,116 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Project setup
+📝 TodoApp
+Basit, güvenli ve ölçeklenebilir bir yapılacaklar listesi (Todo) uygulaması.
+Modern Node.js + NestJS + PostgreSQL altyapısıyla, gerçek kullanıcı yönetimi ve JWT tabanlı kimlik doğrulama içerir.
 
-```bash
-$ npm install
-```
+🚀 Özellikler
+👤 Kullanıcı kayıt & giriş (JWT ile kimlik doğrulama)
 
-## Compile and run the project
+🗒️ Her kullanıcıya özel yapılacaklar listesi
 
-```bash
-# development
-$ npm run start
+➕ Görev ekleme, silme, güncelleme ve listeleme
 
-# watch mode
-$ npm run start:dev
+💾 PostgreSQL ile kalıcı veri saklama (TypeORM)
 
-# production mode
-$ npm run start:prod
-```
+🐳 Docker ile kolay kurulum
 
-## Run tests
+📐 Temiz ve ölçeklenebilir backend mimarisi
 
-```bash
-# unit tests
-$ npm run test
+🖼️ Ekran Görüntüsü
+<!-- Kendi ekran görüntünü 'screenshots/' klasörüne koyup aşağıdaki yolu düzenle -->
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
+🛠️ Kullanılan Teknolojiler
+Node.js
 
-## Deployment
+NestJS
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+TypeORM
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+PostgreSQL
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+Docker
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+JWT (JSON Web Token)
 
-## Resources
+⚡️ Kurulum ve Başlatma
+Ön Koşullar:
 
-Check out a few resources that may come in handy when working with NestJS:
+Node.js 18+
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+Docker (opsiyonel, kolay başlatmak için)
 
-## Support
+Git
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+1. Repoyu Klonla
+bash
+Kopyala
+Düzenle
+git clone https://github.com/sldrdm/TodoApp.git
+cd TodoApp
+2. Bağımlılıkları Kur
+bash
+Kopyala
+Düzenle
+npm install
+3. PostgreSQL'i Docker ile Çalıştır (Tavsiye Edilen)
+bash
+Kopyala
+Düzenle
+docker-compose up -d
+4. Ortam Değişkenlerini Ayarla
+.env dosyasındaki veritabanı bilgilerini kendine göre düzenle.
+Örnek .env dosyası projede mevcut.
 
-## Stay in touch
+5. Veritabanı Migrationlarını Uygula
+bash
+Kopyala
+Düzenle
+npm run typeorm migration:run
+6. Sunucuyu Başlat
+bash
+Kopyala
+Düzenle
+npm run start:dev
+7. Uygulamayı Test Et
+API endpoint’lerini Postman, Insomnia gibi araçlarla test edebilirsin.
+Swagger veya benzeri dökümantasyon varsa http://localhost:3000/api adresine bakabilirsin.
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+📂 Proje Yapısı
+bash
+Kopyala
+Düzenle
+TodoApp/
+├── src/
+│   ├── auth/
+│   ├── users/
+│   ├── todo/
+│   ├── app.module.ts
+│   └── main.ts
+├── .env
+├── docker-compose.yml
+├── package.json
+└── README.md
+✨ API Dökümantasyonu
+Swagger/OpenAPI ile otomatik dokümantasyon varsa:
 
-## License
+http://localhost:3000/api adresine gidin.
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+Her endpoint ve örnek istek-gönderim detaylarını görebilirsiniz.
+
+💡 Katkı Sağlamak İster misin?
+Fork’la ve yeni bir branch aç (feature/ozellik-adı)
+
+Değişikliklerini ekle (commit)
+
+Pull request gönder, birlikte geliştirelim!
+
+📧 İletişim
+Her türlü soru, öneri ve hata bildirimini GitHub Issues üzerinden veya LinkedIn üzerinden bana ulaştırabilirsin.
+
+🪪 Lisans
+MIT © 2025 sldrdm
+
+
